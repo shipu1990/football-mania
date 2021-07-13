@@ -1,0 +1,51 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+/*** main Section***/
+.games {
+  display: flex;
+  justify-content: center;
+  background-color: #2d25a0;
+}
+.container {
+  width: 1160px;
+}
+.game {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  padding: 100px 0;
+}
+.game-title {
+  font-size: 68px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  line-height: 80px;
+}
+.game-thumnail img {
+  width: 556px;
+  height: 438px;
+}
+span.watch-icon {
+  padding-left: 10px;
+}
+a.game-button {
+  background-color: #e02c6d;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 20px;
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  transition: background-color 2s, left 3s;
+}
+a.game-button:hover {
+  background-color: #ac0a44;
+  left: 10px;
+}
