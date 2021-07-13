@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/*** main Section***/
+/*** Top Game Banner Section***/
 .games,
 main,
 footer {
@@ -51,6 +51,7 @@ a.game-button:hover {
   background-color: #ac0a44;
   left: 10px;
 }
+/*** Main and Player Section ***/
 
 main {
   background-color: #f2f2f2;
@@ -84,7 +85,7 @@ main {
   font-size: 16px;
   font-weight: 400;
 }
-
+/*** Footer Section ***/
 footer {
   background-color: #f2f2f2;
   padding-top: 100px;
