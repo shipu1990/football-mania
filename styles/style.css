@@ -11,6 +11,8 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #2d25a0;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
   width: 1160px;
@@ -51,8 +53,8 @@ a.game-button:hover {
   background-color: #ac0a44;
   left: 10px;
 }
-/*** Main and Player Section ***/
 
+/*** Main and Player Section ***/
 main {
   background-color: #f2f2f2;
   padding-top: 100px;
@@ -60,7 +62,8 @@ main {
 .main-container {
   width: 1050px;
 }
-.players {
+.players,
+.gallerys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
@@ -70,6 +73,8 @@ main {
   padding: 15px;
   box-shadow: 0 5px 4px #00000024;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .player img {
   width: 300px;
@@ -84,6 +89,61 @@ main {
 .player-para {
   font-size: 16px;
   font-weight: 400;
+}
+/*** Match Fixture Section (Bonus Part)***/
+table {
+  border-collapse: collapse;
+}
+table.match-details caption,
+.champions-title {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  padding: 25px 0 40px;
+}
+table.match-details thead tr th,
+table.match-details tbody tr td {
+  border: 1px solid #000;
+  padding: 15px 60px;
+  font-size: 16px;
+  text-align: center;
+}
+table.match-details tbody tr:nth-child(2n + 1) {
+  background-color: #2d2d2d12;
+  color: #000;
+}
+table.match-details tbody tr:nth-child(2n) {
+  background-color: #737379b8;
+  color: #fff;
+}
+.champions-title {
+  padding-bottom: 5px;
+}
+
+/*** Gallery Section (Bonus Part)***/
+
+.gallerys {
+  grid-column-gap: 10px;
+}
+.champions-galley {
+  background-color: #fff;
+  margin-top: 60px;
+  padding: 0 10px;
+}
+.gallery {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  overflow: hidden;
+}
+.gallery img {
+  width: 100%;
+  transition: transform 0.2s ease-in;
+  border-radius: 10px;
+}
+.gallery img:hover {
+  transform: scale(1.2);
 }
 /*** Footer Section ***/
 footer {
@@ -122,4 +182,56 @@ a.social-icon i {
 .footer-copyright p {
   font-size: 16px;
   font-weight: 400;
+}
+
+/**** Media Query ***/
+
+/*** Mobile ***/
+@media only screen and (max-width: 688px) {
+  .container,
+  .main-container {
+    width: 90%;
+  }
+  .game {
+    padding: 50px;
+  }
+  .game-title {
+    font-size: 40px;
+    line-height: 50px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  main,
+  footer {
+    padding-top: 50px;
+  }
+  .players,
+  .gallerys,
+  .game {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .player-name,
+  .player-para {
+    text-align: center;
+  }
+  .game-thumnail {
+    padding-top: 50px;
+  }
+  .game-thumnail img,
+  .player img,
+  .footer-logo img {
+    width: 100%;
+    height: auto;
+  }
+  table.match-details thead tr th,
+  table.match-details tbody tr td {
+    padding: 5px;
+  }
 }
